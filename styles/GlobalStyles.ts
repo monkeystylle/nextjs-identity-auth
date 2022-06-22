@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import '@fontsource/nunito';
 
 const GlobalStyles = createGlobalStyle`
 
@@ -102,13 +103,17 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 
-/*Font Family */
+/*Font Family, BG COLOR, Color */
 
 body {
-  
-  font-family:   -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding: 0;
+  margin: 0 20px;
+  font-family: 'Quicksand', sans-serif;
+  color: #444;
+  background: #f2f2f2;
 }
+  
+ 
 
 
 /*
