@@ -6,7 +6,7 @@ import { AuthContext } from '../../stores/authContext';
 type Props = {};
 
 const Navbar = (props: Props) => {
-  const { user, login } = useContext(AuthContext);
+  const { user, login, logout } = useContext(AuthContext);
   console.log(user);
 
   return (
@@ -26,6 +26,7 @@ const Navbar = (props: Props) => {
             </Link>
           </List>
           <List onClick={login}>Login/Signup</List>
+          <List onClick={logout}>Logout</List>
         </UList>
       </Nav>
       <Banner>
