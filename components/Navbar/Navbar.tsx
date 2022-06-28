@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
-
-import { useRouter } from 'next/router';
+import { AuthContext } from '../../stores/authContext';
 
 type Props = {};
 
 const Navbar = (props: Props) => {
-  const router = useRouter();
+  const { user, login } = useContext(AuthContext);
+  console.log(user);
 
   return (
     <NavbarWrapper>
@@ -25,6 +25,7 @@ const Navbar = (props: Props) => {
               <a>Guides</a>
             </Link>
           </List>
+          <List onClick={login}>Login/Signup</List>
         </UList>
       </Nav>
       <Banner>
