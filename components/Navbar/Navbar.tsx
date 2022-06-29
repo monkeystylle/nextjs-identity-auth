@@ -6,7 +6,7 @@ import { AuthContext } from '../../stores/authContext';
 type Props = {};
 
 const Navbar = (props: Props) => {
-  const { user, login, logout } = useContext(AuthContext);
+  const { user, login, logout, authReady } = useContext(AuthContext);
   console.log(user);
 
   return (
@@ -14,20 +14,23 @@ const Navbar = (props: Props) => {
       <Nav>
         <NavImage src="/rupee.png" />
         <GamingTitle>Gaming Vibes</GamingTitle>
-        <UList>
-          <List>
-            <Link href="/">
-              <a>Home</a>
-            </Link>
-          </List>
-          <List>
-            <Link href="/guides">
-              <a>Guides</a>
-            </Link>
-          </List>
-          <List onClick={login}>Login/Signup</List>
-          <List onClick={logout}>Logout</List>
-        </UList>
+        {authReady && (
+          <UList>
+            <List>
+              <Link href="/">
+                <a>Home</a>
+              </Link>
+            </List>
+            <List>
+              <Link href="/guides">
+                <a>Guides</a>
+              </Link>
+            </List>
+            {!user && <List onClick={login}>Login/Signup</List>}
+            {user && <List>{user.email}</List>}
+            {user && <List onClick={logout}>Logout</List>}
+          </UList>
+        )}
       </Nav>
       <Banner>
         <BannerImage src="/banner.png" />
