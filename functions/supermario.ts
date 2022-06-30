@@ -1,4 +1,6 @@
-export const handler = async () => {
+import { Handler } from '@netlify/functions';
+
+const handler: Handler = async () => {
   console.log('function ran');
 
   const data = {
@@ -13,3 +15,5 @@ export const handler = async () => {
     body: JSON.stringify(data),
   };
 };
+
+export { handler };
