@@ -1,4 +1,4 @@
-const handler = async () => {
+export const handler = async () => {
   console.log('function ran');
 
   const data = {
@@ -13,5 +13,3 @@ const handler = async () => {
     body: JSON.stringify(data),
   };
 };
-
-export default handler;
