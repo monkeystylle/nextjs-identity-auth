@@ -49,7 +49,7 @@ const AuthContextProvider = ({ children }: ILayout) => {
 
     return () => {
       netlifyIdentity.off('login');
-      netlifyIdentity.off('logout');
+      // netlifyIdentity.off('logout');
     };
   }, []);
 

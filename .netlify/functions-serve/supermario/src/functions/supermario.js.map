@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": ["../../../../Desktop/FULL STACK PROJECTS/next-netlify-identity/functions/supermario.ts"],
+  "sourceRoot": "C:/Users/Meng/AppData/Local/Temp/tmp-6636-v1dXTmtuYyWn",
+  "sourcesContent": ["import { Handler } from '@netlify/functions';\r\n\r\nconst handler: Handler = async () => {\r\n  console.log('function ran');\r\n\r\n  const data = {\r\n    name: 'mario',\r\n    age: 35,\r\n    job: 'plumber',\r\n  };\r\n\r\n  //return response browser\r\n  return {\r\n    statusCode: 200,\r\n    body: JSON.stringify(data),\r\n  };\r\n};\r\n\r\nexport { handler };\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAEA,IAAM,UAAmB,YAAY;AACnC,UAAQ,IAAI,cAAc;AAE1B,QAAM,OAAO;AAAA,IACX,MAAM;AAAA,IACN,KAAK;AAAA,IACL,KAAK;AAAA,EACP;AAGA,SAAO;AAAA,IACL,YAAY;AAAA,IACZ,MAAM,KAAK,UAAU,IAAI;AAAA,EAC3B;AACF;",
+  "names": []
+}
